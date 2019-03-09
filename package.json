@@ -1,0 +1,23 @@
+{
+  "name": "node.js-mysql",
+  "version": "1.0.0",
+  "description": "homework",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olga1598/Node.js-MySQL.git"
+  },
+  "author": "Olga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olga1598/Node.js-MySQL/issues"
+  },
+  "homepage": "https://github.com/olga1598/Node.js-MySQL#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  }
+}
