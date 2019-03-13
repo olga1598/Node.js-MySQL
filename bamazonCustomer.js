@@ -31,7 +31,10 @@ connection.connect(function(err) {
 
 //We display all of the items that are available for sale
 // query the database for all items being auctioned
+function itemsForSale() {
 connection.query("SELECT * FROM products", function(err, res) {
+    console.log("Here is the list of all the item that are available for sale");
+    console.log("-------------------------------------");
     for (var i = 0; i < res.length; i++) {
             console.log(res[i].id + " | " + res[i].product_name + " | " + res[i].department_name + " | " + res[i].price);
     }
@@ -39,6 +42,8 @@ connection.query("SELECT * FROM products", function(err, res) {
     //connection.end();
     runInquirer();
 });
+};
+itemsForSale();
 
 // function which prompts the user to pick the id of the item he whats to buy and its quantity
 function runInquirer() {
@@ -69,12 +74,12 @@ function runInquirer() {
             // console.log(chosenProductID.product_name);
 
             //Checking up if we have enough quantity of the item for sale
-            if (answer.quantity <= (chosenProductID.stock_quantity - answer.quantity)) {
+            if (answer.quantity <= (chosenProductID.stock_quantity)) {
                 console.log("SOLD");
 
                 //Setting up the variable for total cost from sale perchase
                 var totalCostPurchase = answer.quantity * (chosenProductID.price);
-                console.log("Here is the total cost of your purchase of " + chosenProductID.product_name + " : $" + totalCostPurchase);
+                console.log("Here is the total cost of your purchase of " + chosenProductID.product_name + " : $" + totalCostPurchase.toFixed(2));
 
             //Updating the SQL database to reflect the remaining quatnity of item when it SOLD
             function soldItem() {
@@ -95,6 +100,7 @@ function runInquirer() {
                 );
             }
             soldItem();
+            itemsForSale();
             }
             else {
                 console.log("Insufficient quantity! We don't have enough in stock. Enter another quantity please.");

@@ -5,9 +5,6 @@
 
 In this activity, we'll be creating an Amazon-like storefront with the MySQL skills we learned this unit. The app will take in orders from customers and deplete stock from the store's inventory. 
 
-If you haven't written a markdown file yet, [click here for a rundown](https://guides.github.com/features/mastering-markdown/), or just take a look at the raw file of these instructions.
-
-
 ### Challenge #1: Customer View 
 
 1. Create a MySQL Database called `bamazon`.
@@ -70,4 +67,7 @@ If you haven't written a markdown file yet, [click here for a rundown](https://g
 
 - - -
 - - -
+Here is the link to the video:
 
+https://youtu.be/5jfkpPFlhaY
+https://drive.google.com/open?id=1VTjaJcdaKGHwh4vLhnXp03Fi00C_R_d9
